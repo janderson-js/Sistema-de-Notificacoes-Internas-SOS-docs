@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notificações da Equipe</title>
+  <style>
+    body {
+      width: 260px;
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 15px;
+      margin: 0 0 12px;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+    }
+    .hint {
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Notificações da Equipe</h1>
+
+  <div id="setupView">
+    <p class="hint">Digite seu nome pra começar a receber avisos:</p>
+    <input type="text" id="nameInput" placeholder="Seu nome" />
+    <button id="saveNameBtn">Salvar</button>
+  </div>
+
+  <div id="statusView" class="hidden">
+    <div class="status">
+      <span class="dot"></span>
+      <span id="statusText">Ativo como <b id="employeeNameLabel"></b></span>
+    </div>
+    <p class="hint" id="lastCheckLabel"></p>
+    <button id="editNameBtn">Alterar nome</button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
