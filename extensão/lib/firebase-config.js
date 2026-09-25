@@ -11,5 +11,5 @@ export const firebaseConfig = {
   projectId: "painel-de-notificacao",
   storageBucket: "painel-de-notificacao.firebasestorage.app",
   messagingSenderId: "309434470083",
-  appId: "1:309434470083:web:d5bb8c6ffb7c5ea559dc7""
+  appId: "1:309434470083:web:d5bb8c6ffb7c5ea559dc7"
 };
